@@ -1,7 +1,4 @@
 # This is a custom ubuntu image with SSH installed
-#
-
-MAINTAINER byunique <me@brandonyu.com>
 FROM python:3.7.0-slim
 
 # Set the working directory to /app
@@ -17,8 +14,7 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 80
 
 # Define environment variable
-#ENV NAME World
+ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
-
